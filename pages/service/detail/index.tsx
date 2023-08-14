@@ -5,7 +5,7 @@ import FeatureCard, {
 } from 'components/molecules/Card/FeatureCard'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Link from 'next/link'
 import React from 'react'
 import {

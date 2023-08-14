@@ -8,13 +8,13 @@ import SectionSentence from 'components/molecules/SectionSentence'
 import LogoList from 'components/organisms/LogoList'
 import TestimonialList from 'components/organisms/TestimonialList'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 import { FiFigma, FiCode, FiBox } from 'react-icons/fi'
 const Home = () => {
   return (
     <>
-      <PageTemplate title="Home - Collosal">
+      <PageTemplate title="Home - Your Tech Partner">
         {/* Banner Section */}
         <section
           className="flex flex-col gap-10 items-center"

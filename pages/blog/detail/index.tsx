@@ -9,7 +9,7 @@ import InputGroup from 'components/molecules/FormGroup/InputGroup'
 import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import randomString from 'utils/randomString'

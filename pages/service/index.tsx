@@ -2,7 +2,7 @@ import React from 'react'
 import PageTemplate from 'components/templates/PageTemplate'
 import PageSentence from 'components/molecules/PageSentence'
 import LineDivider from 'components/atoms/LineDivider'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import SectionSentence from 'components/molecules/SectionSentence'
 import {
   FiArrowUp,

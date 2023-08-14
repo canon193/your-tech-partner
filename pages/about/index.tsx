@@ -5,7 +5,7 @@ import SectionSentence from 'components/molecules/SectionSentence'
 import LogoList from 'components/organisms/LogoList'
 import StatisticList from 'components/organisms/StatisticList'
 import PageTemplate from 'components/templates/PageTemplate'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 import React from 'react'
 
 const About = () => {
