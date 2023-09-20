@@ -10,8 +10,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     AOS.init({
       duration: 600
     })
+  }, [])
+  useEffect(() => {
     TagManager.initialize({ gtmId: process.env.GOOGLE_ANALYTIC_WEBSITE_ID });
   }, [])
+
   return <Component {...pageProps} />
 }
 
