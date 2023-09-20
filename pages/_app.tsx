@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import { useEffect } from 'react'
+import GoogleAnalytics from "../components/google-analytics/GoogleAnalytics";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -10,7 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       duration: 600
     })
   }, [])
-  return <Component {...pageProps} />
+  return (
+      <>
+        <GoogleAnalytics />
+        <Component {...pageProps} />
+      </>
+  );
 }
 
 export default MyApp
