@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import { useEffect } from 'react'
-import TagManager from 'react-gtm-module';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -11,10 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       duration: 600
     })
   }, [])
-  useEffect(() => {
-    TagManager.initialize({ gtmId: process.env.GOOGLE_ANALYTIC_WEBSITE_ID });
-  }, [])
-
   return <Component {...pageProps} />
 }
 
