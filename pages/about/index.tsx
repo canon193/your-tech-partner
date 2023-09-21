@@ -20,7 +20,6 @@ const About = () => {
               objectFit="contain"
               quality={80}
               alt="Programmers when coding in their laptop"
-              
             />
           </div>
         </aside>
@@ -31,7 +30,7 @@ const About = () => {
           <PageSentence
             badge="ABOUT"
             title="We are creative, smart and hardworking people"
-            description={`Several creative people gather in the same place - that's Your Tech Partner. We collaborate to produce the best results, loved by clients and comfortable for users. Here we maintain togetherness even though with different backgrounds, all the people here are already experts in their respective fields.`}
+            description={`Our team consists of many talented and disciplined developers working many years in software outsourcing from Vietnam. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results.`}
           />
         </aside>
       </section>
@@ -66,44 +65,44 @@ const About = () => {
         <div className="w-full grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-1.webp"
-              job="Founder"
-              name="Albert Flores"
+              imageSrc="/images/about/vule.jpg"
+              job="Founder - Tech Lead"
+              name="Vu Le"
             />
           </div>
           <div data-aos="fade-up">
             <TeamCard
-              imageSrc="/images/team-2.webp"
-              job="Chief Technology Officer"
-              name="Devon Lane"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <TeamCard
-              imageSrc="/images/team-3.webp"
-              job="UI Designer"
-              name="Darrell Steward"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <TeamCard
-              imageSrc="/images/team-4.webp"
-              job="Software Engineer"
-              name="Marvin McKinney"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <TeamCard
-              imageSrc="/images/team-5.webp"
-              job="System Analyst"
-              name="Floyd Miles"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <TeamCard
-              imageSrc="/images/team-6.webp"
+              imageSrc="/images/about/longtran.jpg"
               job="Project Manager"
-              name="Annette Black"
+              name="Long Tran"
+            />
+          </div>
+          <div data-aos="fade-up">
+            <TeamCard
+              imageSrc="/images/about/emmahuynh.jpg"
+              job="UI Designer"
+              name="Emma Huynh"
+            />
+          </div>
+          <div data-aos="fade-up">
+            <TeamCard
+              imageSrc="/images/about/khanguyen.jpg"
+              job="Software Engineer"
+              name="Kha Nguyen"
+            />
+          </div>
+          <div data-aos="fade-up">
+            <TeamCard
+              imageSrc="/images/about/phongnguyen.jpg"
+              job="Software Engineer"
+              name="Phong Nguyen"
+            />
+          </div>
+          <div data-aos="fade-up">
+            <TeamCard
+              imageSrc="/images/about/minhnguyen.jpg"
+              job="DevOps Engineer"
+              name="Minh Nguyen"
             />
           </div>
         </div>
