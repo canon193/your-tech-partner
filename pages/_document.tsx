@@ -26,7 +26,7 @@ const Document = () => {
           type="image/x-icon"
         />
       </Head>
-        <body>
+        <body className="mb-[-128px]">
             <Main />
             <NextScript />
             <noscript
