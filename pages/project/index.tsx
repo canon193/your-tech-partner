@@ -61,8 +61,10 @@ const Project = () => {
             return (
               <div className="basis-full lg:basis-1/2" key={randomString(64)} data-aos="zoom-in-up">
                 <ProjectCard
-                  title={project.title}
-                  description={project.description}
+                    hasImage={false}
+                    imageUrl={""}
+                    title={project.title}
+                    description={project.description}
                 />
               </div>
             )
