@@ -35,7 +35,7 @@ const Services = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-auto h-[311px] relative">
               <Image
-                src={'/images/sevices/UI-UX-Design.png'}
+                src={'/images/services/UI-UX-Design.png'}
                 layout="intrinsic"
                 width={429}
                 height={311}
@@ -94,13 +94,13 @@ const Services = () => {
                 />
                 <CardListIcon icon={<FiGlobe />} title="Google Ads Script" />
               </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
+              <TextArrowLink label="Service Detail" href="/service/automation-solutions" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-full h-[430px] relative">
               <Image
-                src={'/images/sevices/Automation-Solutions.png'}
+                src={'/images/services/Automation-Solutions.png'}
                 layout="intrinsic"
                 width={401}
                 height={430}
@@ -114,7 +114,7 @@ const Services = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[543px] relative">
               <Image
-                src={'/images/sevices/websites.png'}
+                src={'/images/services/websites.png'}
                 layout="intrinsic"
                 width={559}
                 height={543}
@@ -138,7 +138,7 @@ const Services = () => {
                 <IconListItem icon={<FiRefreshCcw />} value='Change Request' />
                 <IconListItem icon={<FiCheckCircle />} value='Fixing error' />
               </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
+              <TextArrowLink label="Service Detail" href="/service/websites" />
             </div>
           </aside>
         </section>
@@ -159,13 +159,13 @@ const Services = () => {
                 />
                 <CardListIcon icon={<FiGlobe />} title="Automotives" />
               </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
+              <TextArrowLink label="Service Detail" href="/service/embedded-system" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-auto h-[430px] relative">
               <Image
-                src={'/images/sevices/embedded-system.png'}
+                src={'/images/services/embedded-system.png'}
                 layout="intrinsic"
                 width={401}
                 height={430}
