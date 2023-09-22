@@ -5,7 +5,8 @@ import IconListItem from 'components/molecules/IconListItem'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
-import { FiMail, FiPhoneCall } from 'react-icons/fi'
+import { FiMail, FiPhoneCall, FiSlack } from 'react-icons/fi'
+import {LiaSkype} from 'react-icons/lia'
 
 const Contact = () => {
   return (
@@ -15,21 +16,35 @@ const Contact = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 grid grid-cols-1 gap-12 sm:place-items-center lg:w-full lg:place-items-start" data-aos="fade-up-right">
             <div className="sm:text-center lg:text-left">
               <PageSentence
-                title="We love receiving messages from you, we are waiting for it."
                 badge="CONTACT"
+                title="We love receiving messages from you, we are waiting for it."
               />
             </div>
             <div className="space-y-6">
-              <IconListItem
-                label="Phone"
-                value="+62 1234 8921"
-                icon={<FiPhoneCall />}
-              />
-              <IconListItem
-                label="Email"
-                value="support@your-tech-partner.com"
-                icon={<FiMail />}
-              />
+              <div className="grid grid-cols-2 gap-4">
+                <IconListItem
+                  label="Slack"
+                  value=""
+                  icon={<FiSlack />}
+                />
+                <IconListItem
+                  label="Skype"
+                  value=""
+                  icon={<LiaSkype />}
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <IconListItem
+                  label="Phone"
+                  value="+62 1234 8921"
+                  icon={<FiPhoneCall />}
+                />
+                <IconListItem
+                  label="Email"
+                  value="support@your-tech-partner.com"
+                  icon={<FiMail />}
+                />
+              </div>
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
