@@ -33,17 +33,19 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
     };
   }, [container])
   return (
-    <div className="w-full rounded-md overflow-hidden" ref={container}>
+    <div className="w-full bg-white/5 rounded-md overflow-hidden" ref={container}>
       <div className="w-full relative">
         <Image
           width={imageSize.width}
           height={imageSize.height}
           src={imageSrc}
           quality={80}
+          objectFit="contain"
+          objectPosition="bottom"
           alt="Team Avatar"
         />
       </div>
-      <div className="w-full bg-light px-8 py-7 grid gap-2">
+      <div className="w-full px-8 py-7 grid gap-2">
         <Text textStyle="TeamName" value={name} />
         <Text textStyle="TeamJob" value={job} />
       </div>
