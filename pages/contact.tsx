@@ -22,7 +22,7 @@ const Contact = () => {
             <div className="space-y-6">
               <IconListItem
                 label="Phone"
-                value="+62 1234 8921"
+                value="+84 38 247 9998"
                 icon={<FiPhoneCall />}
               />
               <IconListItem

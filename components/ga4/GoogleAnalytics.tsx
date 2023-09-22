@@ -2,7 +2,8 @@
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { memo, useEffect } from "react";
-const TRACKING_ID = process.env.GOOGLE_ANALYTIC_WEBSITE_ID!;
+const TRACKING_ID = process.env.NEXT_PUBLIC_GA4_TRACKING_ID;
+
 const GoogleAnalytics = () => {
   const router = useRouter();
   // 👇 send page views when users gets to the landing page

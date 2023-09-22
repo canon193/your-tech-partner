@@ -78,6 +78,8 @@ const ProjectDetail = () => {
                 data-aos="zoom-in-up"
               >
                 <ProjectCard
+                  hasImage={false}
+                  imageUrl=""
                   title={project.title}
                   description={project.description}
                 />
