@@ -2,7 +2,7 @@ import Button from 'components/atoms/Button'
 import Select from 'components/atoms/Form/Select'
 import LineDivider from 'components/atoms/LineDivider'
 import PageSentence from 'components/molecules/PageSentence'
-import ProjectCard from 'components/molecules/Card/ProjectCard'
+import ProjectCard from 'components/yourTechPartner/ProjectCard'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import randomString from 'utils/randomString'
@@ -14,20 +14,27 @@ const Project = () => {
   }
   const projectList: Project[] = [
     {
-      title: 'The Mobile App Landing Page',
-      description: 'A landing page for mobile app',
+      title: 'H&M Website',
+      description: 'E-commerce brand website',
+      imageUrl: '/images/projects/hmwebsite.jpg',
+      linkDetail: '/project/hm-website'
     },
     {
-      title: 'The Desktop App Landing Page',
+      title: 'Ralph Lauren Website',
+      description: 'E-commerce brand website',
+      imageUrl: '/images/projects/ralphlauren.jpg',
+      linkDetail: '/project/ralph-lauren-website'
+    },
+    {
+      title: 'Service Car Mobile Application',
       description: 'A landing page for desktop app',
+      linkDetail: '/project/detail'
     },
     {
-      title: 'Simple Mobile Blog App',
-      description: 'A blog app on mobile platform',
-    },
-    {
-      title: 'Realtime Chat App UI Design',
-      description: 'A UI design for realtime chat app',
+      title: 'Vinfast Automotives Applications',
+      description: 'A landing page for mobile app',
+      imageUrl: '/images/projects/vinfast.png',
+      linkDetail: '/project/vinfast-automotives-applications'
     },
   ]
   return (
@@ -40,14 +47,14 @@ const Project = () => {
           <div className="text-center md:text-left">
             <PageSentence
               badge="PROJECTS"
-              title="We have completed many amazing projects that you will not believe"
+              title="We have completed many amazing projects serving clients with diverse purposes."
             />
           </div>
         </aside>
         <aside className="w-full min-w-[175px] md:w-fit" data-aos="fade-left">
           <Select
             options={[
-              { label: 'App', value: 'app' },
+              { label: 'Technology', value: 'technology' },
               { label: 'UI Design', value: 'ui-design' },
               { label: 'Other', value: 'other' },
             ]}
@@ -63,6 +70,8 @@ const Project = () => {
                 <ProjectCard
                   title={project.title}
                   description={project.description}
+                  imageUrl={project.imageUrl}
+                  linkDetail={project.linkDetail}
                 />
               </div>
             )
