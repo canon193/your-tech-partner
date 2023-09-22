@@ -22,13 +22,13 @@ const Home = () => {
         >
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
-              title="We Design. We Develop. We Ship. In The Same Day."
-              description="We are committed to not making clients wait. We will deliver the work as quickly as possible. Even on the same day. Even so, we do not reduce the quality of our work."
-              badge="CLIENT-DEVELOPMENT-DRIVEN"
+              badge="CLIENT-DEVELOPMENT DRIVEN"
+              title="We elicit. We design. We deliver."
+              description="We discover and understand Client’s demand, suggest options that fit as much as possible. Client receive thorough workshop before finalize the idea. Timely delivering is our way."
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
-            <ButtonLink value="Send Quote" href="/quote" />
+            <ButtonLink value="Contact us" href="/contact" />
             <ButtonLink
               value="Learn More"
               color="white"
@@ -41,8 +41,8 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Design"
-              description="The project interface will be designed first, our favorite tool is Figma."
+              title="Design and Plan"
+              description="The project requirements are discussed and finalized, our favourite tools are Figma, AI, PTS."
               icon={<FiFigma />}
             />
           </div>
@@ -55,8 +55,8 @@ const Home = () => {
           </div>
           <div data-aos="fade-up">
             <FeatureCard
-              title="Ship"
-              description="After the work is complete, we will send the project and all its assets to you."
+              title="Ship and Support"
+              description="After the work is complete, we will send the project and all its assets to you. Support are also included for a certain period."
               icon={<FiBox />}
             />
           </div>
@@ -67,7 +67,7 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
             <Image
-              src={'/images/how-we-work-illustration.svg'}
+              src={'/images/home/how-we-work-illustration.png'}
               layout="fill"
               objectFit="fill"
               alt="Structured plan"
@@ -78,9 +78,9 @@ const Home = () => {
             data-aos="fade-left"
           >
             <SectionSentence
+              badge="HOW WE WORK?"
               title="Everything is well planned, well designed and developed wholeheartedly"
-              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test projects before they are shipped."
-              badge="HOW WE WORK"
+              paragraph="Careful planning makes us confident, developed with best practices so that the project can be maintained. We always test thoroughly projects before they are shipped."
             />
           </aside>
         </section>
@@ -89,9 +89,9 @@ const Home = () => {
           <aside className="text-center sm:w-10/12 lg:text-left lg:w-full">
             <div className="space-y-12" data-aos="fade-right">
               <SectionSentence
-                title="We're a team of designers, engineers and analysts"
-                paragraph="Our team consists of many creative people. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
                 badge="OUR TEAM"
+                title="We are a team of designers and engineers."
+                paragraph="Our team consists of many talented and disciplined developers working many years in software outsourcing from Vietnam. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
               />
               <ButtonLink
                 value="See Our Teams"
@@ -122,21 +122,25 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="We have completed many amazing projects that you will not believe"
               badge="PROJECTS"
+              title="We have completed many amazing projects serving clients with diverse purposes."
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5">
             <div data-aos="flip-left">
               <ProjectCard
-                title="The Desktop App Landing Page"
-                description="A landing page for desktop app"
+                hasImage={true}
+                imageUrl="/images/home/project-1.png"
+                title="Automation Process"
+                description="Helps client to save time doing repetitive daily tasks."
               />
             </div>
             <div data-aos="flip-right">
               <ProjectCard
-                title="The Mobile App Landing Page"
-                description="A landing page for mobile app"
+                hasImage={true}
+                imageUrl="/images/home/project-2.png"
+                title="Website"
+                description="Where client can make e-commerce, or simply digital marketing."
                 bottomSquareSize="big"
               />
             </div>
@@ -149,20 +153,20 @@ const Home = () => {
             data-aos="zoom-in-up"
           >
             <SectionSentence
-              title="What do you need? Choose a service that can help you"
               badge="GET STARTED"
+              title="What do you need? Choose a service that can help you"
             />
           </div>
           <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
             <div data-aos="fade-up-right">
               <PricingCard
-                price="1200$"
+                price="500$"
                 title="UI Design"
                 features={[
                   '10 design pages',
                   'Well-documented',
-                  '4 revisions',
-                  '$100/additional page',
+                  '2 revisions',
+                  '$100/additional page'
                 ]}
               />
             </div>
@@ -173,8 +177,8 @@ const Home = () => {
                 features={[
                   'Web & Mobile',
                   'Well-documented',
-                  '8 revisions',
-                  '$1000/additional page',
+                  '4 revisions',
+                  '$1000/additional feature'
                 ]}
               />
             </div>
@@ -186,7 +190,7 @@ const Home = () => {
                   'Daily backup',
                   '3 hours of maintenance',
                   'Including fixing',
-                  '$50/additional hour',
+                  '$50/additional hour'
                 ]}
               />
             </div>
@@ -196,8 +200,8 @@ const Home = () => {
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
             <SectionSentence
-              title="What do our clients say that we never let down?"
               badge="TESTIMONIAL"
+              title="What do our clients say that we never let down?"
             />
           </div>
           <div className="w-full" data-aos="fade-up">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import NavBrand from 'components/atoms/NavBrand'
+import NavBrandHeader from 'components/yourTechPartner/NavBrandHeader'
 import NavLink from 'components/atoms/NavLink'
 import ButtonLink from 'components/atoms/Button/ButtonLink'
 import Container from 'components/templates/Container'
@@ -13,13 +13,19 @@ const NavBar = () => {
   const browserName = useGetBrowserName()
   const isMobile = useMobileDeviceDetection()
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const scrollListener = () => {
       if (window.scrollY > 150) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
       }
-    })
+    };
+
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    };
   }, [])
   useEffect(() => {
     if (isOpen) {
@@ -47,7 +53,7 @@ const NavBar = () => {
           >
             <div className="flex flex-col lg:flex-row w-full place-content-between lg:place-items-center">
               <div className="w-full flex flex-row place-content-between place-items-center lg:w-fit">
-                <NavBrand />
+                <NavBrandHeader />
                 <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                   <div
                     className={`text-white text-2xl ${
