@@ -14,7 +14,7 @@ const NavBrandFooter = () => {
       >
         <Link href={'/'} passHref>
           <div className="w-fit h-fit">
-            <Image src={'/images/brand.svg'} width='78' height={72} alt='company brand' loading='lazy' />
+            <Image src={'/images/brand.svg'} width='100' height={100} alt='company brand' loading='lazy' />
           </div>
         </Link>
       </div>
