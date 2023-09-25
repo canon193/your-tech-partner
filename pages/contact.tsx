@@ -54,20 +54,8 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <IconListItem
-                  label="Slack"
-                  value=""
-                  icon={<FiSlack />}
-                />
-                <IconListItem
-                  label="Skype"
-                  value=""
-                  icon={<LiaSkype />}
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <IconListItem
                   label="Phone"
-                  value="+62 1234 8921"
+                  value="+84 38 247 9998"
                   icon={<FiPhoneCall />}
                 />
                 <IconListItem
