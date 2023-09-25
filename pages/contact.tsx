@@ -4,11 +4,42 @@ import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import IconListItem from 'components/molecules/IconListItem'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import React from 'react'
+import React, { FormEvent } from 'react'
 import { FiMail, FiPhoneCall, FiSlack } from 'react-icons/fi'
 import {LiaSkype} from 'react-icons/lia'
+import axios from "axios";
 
 const Contact = () => {
+  const [state, setState] = React.useState({
+    script_type: "contact",
+    email: "",
+    name: "",
+    subject: "",
+    message: "",
+  });
+  const urlAction = process.env.CONTACT_US_GOOGLE_SCRIPT
+  function handleChange(e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setState({ ...state, [e.target.name]: e.target.value });
+  }
+
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    let formData = new FormData();
+
+    for (let [key, value] of Object.entries(state)) {
+      formData.append(key, value);
+    }
+
+    await axios
+      .post('https://script.google.com/macros/s/AKfycbwFeuPvhjwZaCL_pZDMltno2Jh9HxkN8nOvEsZsth7Dcgs2aHzqIKk16Athbaep6oMk/exec', formData)
+      .then(({ data }) => {
+        // Redirect used for reCAPTCHA and/or thank you page
+        // window.location.href = redirect;
+      })
+      .catch((e) => {
+        // window.location.href = e.response.data.redirect;
+      });
+  }
   return (
     <>
       <PageTemplate title='Contact - Your Tech Partner'>
@@ -48,15 +79,16 @@ const Contact = () => {
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
-            <div className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
+            <form  onSubmit={onSubmit} className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
               <div className="grid grid-cols-2 gap-4">
-                <InputGroup label="Name" />
-                <InputGroup label="Email" />
+                <input type="hidden" onChange={handleChange} name="script_type" value={'contact'} />
+                <InputGroup onChange={handleChange} label="Name" name="name" />
+                <InputGroup onChange={handleChange} label="Email" name="email" />
               </div>
-              <InputGroup label="Subject" />
-              <TextAreaGroup label="Message" />
+              <InputGroup onChange={handleChange} label="Subject" name="subject" />
+              <TextAreaGroup onChange={handleChange} label="Message" name="message" />
               <Button value="Send Message" />
-            </div>
+            </form>
           </aside>
         </section>
       </PageTemplate>

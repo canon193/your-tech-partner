@@ -13,6 +13,7 @@ const InputGroup = ({
   onSubmit,
   required,
   placeholder,
+  name,
 }: InputGroupProps) => {
   const [randomId, setRandomId] = useState<string>('')
   useEffect(() => {
@@ -24,6 +25,7 @@ const InputGroup = ({
       <Input
         defaultValue={defaultValue}
         id={randomId}
+        name={name || randomId}
         onChange={onChange}
         onSubmit={onSubmit}
         placeholder={placeholder}

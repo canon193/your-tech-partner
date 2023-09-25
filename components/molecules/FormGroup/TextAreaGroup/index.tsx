@@ -14,6 +14,7 @@ const TextAreaGroup = ({
   required,
   rows,
   placeholder,
+  name
 }: TextAreaGroupProps) => {
   const [randomId, setRandomId] = useState<string>('')
   useEffect(() => {
@@ -30,6 +31,7 @@ const TextAreaGroup = ({
         placeholder={placeholder}
         required={required}
         rows={rows}
+        name={name || randomId}
       />
     </div>
   )
