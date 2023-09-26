@@ -39,25 +39,41 @@ const TestimonialList = () => {
       >
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/testimonial/david-pippenger-epicurean-advertising.jpg"
+            name="David Pippenger"
+            linkedin="https://www.linkedin.com/in/dapippenger/"
+            company="Epicurean Advertising"
+            company_website="https://epicureanadvertising.com/"
+            testimony={`"Le and his team have worked with me on various projects and has consistently impressed me with their ability to take my ideas and turn them into a functional website, custom data tool, or both.</br>The concerns I had working with someone multiple time zones away (14 hours ahead of us) proved completely unfounded. They have made himself available at the beginning and end of our day to have Zoom conferences, email exchanges, or chats.</br>If you utilize Le and his team, their speedy response times and excellent programming skill set will make you look like a genius. At least, that is what they have done for me."`}
+          />
+        </SwiperSlide>
+        <SwiperSlide className='mt-10'>
+          <TestimonialCard
+            avatarSrc="/images/testimonial/aaron-fox-aaron-fox-law.jpg"
+            name="Aaron Fox"
+            linkedin="https://www.linkedin.com/in/aaron-fox-law/"
+            company="Aaron Fox Law"
+            company_website="https://aaronfoxlaw.com/"
+            testimony={`"Where to start? Le and his team are absolutely amazing!!! A++++. I first hired them to create a pdf automation software. They delivered way beyond expectations!!! Then, because they were so good at automations, they simplified and made better a different program in google sheets that a different UpWork person did. The reason they could fix it, is because of their advanced knowledge of software automation. Then, they kept on helping us make our next automation, basically, making Zapier subscription pointless, because they just made the integration themself. Then an enterprise Law Firm management software was not integrating with Google Contacts, then came them to the rescue, to the point, my law firm management software wanted their resume because they were able to create a workaround themself."`}
+          />
+        </SwiperSlide>
+        <SwiperSlide className='mt-10'>
+          <TestimonialCard
+            avatarSrc="/images/testimonial/steve-cory-oaksure-financial-service.jpg"
+            name="Steve Cory"
+            linkedin=""
+            company="Oaksure Financial Services"
+            company_website="https://www.oaksure.co.za"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
           <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-2.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
-          />
-        </SwiperSlide>
-        <SwiperSlide className='mt-10'>
-          <TestimonialCard
-            avatarSrc="/images/testimonial-avatar-3.png"
-            name="Esther Howard"
-            company="Abstergo Ltd."
+            avatarSrc="/images/testimonial/will-panton-vets-love-pet.jpg"
+            name="Will Panton"
+            linkedin="https://www.linkedin.com/in/will-panton-4b780616"
+            company="Vets Love Pets"
+            company_website="https://vetslovepets.com.au/"
             testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
           />
         </SwiperSlide>

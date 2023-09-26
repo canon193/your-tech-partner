@@ -8,8 +8,8 @@ const TermOfService = () => {
   return (
     <PageTemplate>
       <section className="space-y-6 text-center" data-aos="zoom-in-up">
-        <PageSentence badge="PAGE" title={`Terms & Conditions`} />
-        <Text textStyle="BlogMeta" value="Updated at 2021-05-06" />
+        <PageSentence badge="" title={`Terms & Conditions`} />
+        <Text textStyle="BlogMeta" value="Updated at 2023-09-02" />
       </section>
       <LineDivider />
       <section className="grid place-items-center" data-aos="fade-up">

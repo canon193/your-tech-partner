@@ -1,0 +1,20 @@
+[
+    {
+      "title": "ScriptureCast® Website",
+      "description": "Bible information website",
+      "imageUrl": "/images/projects/scripturecast_reading.png",
+      "linkDetail": "/project/scripturecast"
+    },
+    {
+      "title": "H&M Website",
+      "description": "E-commerce brand website",
+      "imageUrl": "/images/projects/hmwebsite.jpg",
+      "linkDetail": "/project/hm-website"
+    },
+    {
+      "title": "Diagnostic Tester for Vinfast ECUs",
+      "description": "Service tool to diagnose, create report for Vinfast ECUs during manufacturing",
+      "imageUrl": "/images/projects/vinfast.png",
+      "linkDetail": "/project/vinfast-automotives-applications"
+    }
+]

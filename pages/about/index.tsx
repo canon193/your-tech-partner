@@ -52,7 +52,7 @@ const About = () => {
           <LogoList />
         </div>
       </section>
-      <section className="grid place-items-center gap-16">
+      <section id="our-team" className="grid place-items-center gap-16">
         <div
           className="sm:w-10/12 md:w-8/12 lg:w-6/12 2xl:w-5/12 text-center"
           data-aos="zoom-in-up"
@@ -66,8 +66,9 @@ const About = () => {
           <div data-aos="fade-up">
             <TeamCard
               imageSrc="/images/about/vule.jpg"
-              job="Founder - Tech Lead"
+              job="Founder"
               name="Vu Le"
+              linkedin="https://www.linkedin.com/in/le-anh-vu-ba770aa7/"
             />
           </div>
           <div data-aos="fade-up">
@@ -75,6 +76,7 @@ const About = () => {
               imageSrc="/images/about/longtran.jpg"
               job="Project Manager"
               name="Long Tran"
+              linkedin="https://www.linkedin.com/in/long-tran26/"
             />
           </div>
           <div data-aos="fade-up">
@@ -82,6 +84,7 @@ const About = () => {
               imageSrc="/images/about/emmahuynh.jpg"
               job="UI Designer"
               name="Emma Huynh"
+              linkedin="https://www.linkedin.com/in/myhuynhdesigner/"
             />
           </div>
           <div data-aos="fade-up">
@@ -89,6 +92,7 @@ const About = () => {
               imageSrc="/images/about/khanguyen.jpg"
               job="Software Engineer"
               name="Kha Nguyen"
+              linkedin=""
             />
           </div>
           <div data-aos="fade-up">
@@ -96,6 +100,7 @@ const About = () => {
               imageSrc="/images/about/phongnguyen.jpg"
               job="Software Engineer"
               name="Phong Nguyen"
+              linkedin="https://www.linkedin.com/in/phong-nguyen-556199158/"
             />
           </div>
           <div data-aos="fade-up">
@@ -103,6 +108,7 @@ const About = () => {
               imageSrc="/images/about/minhnguyen.jpg"
               job="DevOps Engineer"
               name="Minh Nguyen"
+              linkedin="https://www.linkedin.com/in/minff/"
             />
           </div>
         </div>

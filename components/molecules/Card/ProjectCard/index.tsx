@@ -2,7 +2,8 @@ import Button from 'components/atoms/Button'
 import ButtonLink from 'components/atoms/Button/ButtonLink'
 import LazyCard, { LazyCardProps } from 'components/atoms/LazyCard'
 import Text from 'components/atoms/Text'
-import Image from "next/legacy/image"
+import Image from 'next/image'
+
 interface ProjectCardProps extends LazyCardProps {
   title: string
   description: string
@@ -17,12 +18,12 @@ const ProjectCard = ({
   hasImage = false,
   imageUrl = ''
 }: ProjectCardProps) => {
-  var ImageContent = <div
+  let ImageContent = <div
       className={`w-full flex flex-col place-items-center place-content-between bg-cardDark rounded-md`}
     >
-      <img src={imageUrl} alt={title} width="100%" />
+      <Image src={imageUrl} alt={title} width={0} height={0} sizes="100vw" style={{ width: '100%', height: 'auto' }} />
     </div>
-  var Card = hasImage ? ImageContent : <LazyCard bottomSquareSize={bottomSquareSize} height={height} /> ;
+  let Card = hasImage ? ImageContent : <LazyCard bottomSquareSize={bottomSquareSize} height={height} /> ;
   return (
     <div className="w-full">
       {Card}

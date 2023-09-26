@@ -23,8 +23,8 @@ const Home = () => {
           <div className="w-10/12 md:w-8/12 text-center">
             <PageSentence
               badge="CLIENT-DEVELOPMENT DRIVEN"
-              title="We elicit. We design. We deliver."
-              description="We discover and understand Client’s demand, suggest options that fit as much as possible. Client receive thorough workshop before finalize the idea. Timely delivering is our way."
+              title="We elicit. We deliver. We support."
+              description="We discover and understand Client’s demand, suggest options that fit as much as possible. Timely delivering is our way. And our support will make you feel us as a partner."
             />
           </div>
           <div className="flex flex-col gap-6 sm:flex-row w-full sm:w-fit">
@@ -41,28 +41,68 @@ const Home = () => {
         <section className="grid grid-cols-1 gap-5 md:grid-cols-3 mb-16">
           <div data-aos="fade-up">
             <FeatureCard
-              title="Design and Plan"
-              description="The project requirements are discussed and finalized, our favourite tools are Figma, AI, PTS."
+              title="Understood"
+              description="Your business idea will be grasped for tailored solutions through detailed requirement discussions."
               icon={<FiFigma />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
               title="Develop"
-              description="Transform design and write business logic here. Choose the technology you want."
+              description="We efficiently execute projects with precise development and thorough testing, ensuring high-quality results."
               icon={<FiCode />}
             />
           </div>
           <div data-aos="fade-up">
             <FeatureCard
               title="Ship and Support"
-              description="After the work is complete, we will send the project and all its assets to you. Support are also included for a certain period."
+              description="Upon project completion, we deliver all assets and extend ongoing support, serving as your dedicated tech partner."
               icon={<FiBox />}
             />
           </div>
         </section>
         {/* Logo List */}
         <LogoList />
+        {/* Our Teams */}
+        <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
+          <aside className="text-center sm:w-10/12 lg:text-left lg:w-full">
+            <div className="space-y-12" data-aos="fade-right">
+              <SectionSentence
+                badge="Who We Are"
+                title="Your Trusted Technology Partner"
+                paragraph="We are a cohesive team of experienced software developers with a strong background in software outsourcing in Vietnam. Aiming to be your trusted technology partner, committed to delivering high-quality work promptly. These creative people work together to create maximum work results."
+              />
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.2em" }}>
+                <ButtonLink
+                  value="See Our Teams"
+                  href="/teams#our-team"
+                  size="small"
+                  color="white"
+                  style="light"
+                />
+                <ButtonLink
+                  value="Explore our Upwork profile"
+                  href="https://www.upwork.com/freelancers/leanhvu"
+                  size="small"
+                  color="white"
+                  style="light"
+                />
+              </div>
+            </div>
+          </aside>
+          <aside
+            className="w-full h-[400px] relative sm:w-8/12 lg:w-full"
+            data-aos="fade-left"
+          >
+            <Image
+              src={'/images/team-illustration.svg'}
+              layout="fill"
+              objectFit="fill"
+              alt="Code editor and UI Editing popup"
+            />
+          </aside>
+        </section>
+        <LineDivider />
         {/* How We Work */}
         <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
           <aside className="w-full h-[400px] relative" data-aos="fade-right">
@@ -84,37 +124,6 @@ const Home = () => {
             />
           </aside>
         </section>
-        {/* Our Teams */}
-        <section className="grid grid-cols-1 gap-6 sm:gap-8 place-items-center lg:grid-cols-2">
-          <aside className="text-center sm:w-10/12 lg:text-left lg:w-full">
-            <div className="space-y-12" data-aos="fade-right">
-              <SectionSentence
-                badge="OUR TEAM"
-                title="We are a team of designers and engineers."
-                paragraph="Our team consists of many talented and disciplined developers working many years in software outsourcing from Vietnam. We are committed to maintaining quality work as well as speed. These creative people work together to create maximum work results."
-              />
-              <ButtonLink
-                value="See Our Teams"
-                href="/teams"
-                size="small"
-                color="white"
-                style="light"
-              />
-            </div>
-          </aside>
-          <aside
-            className="w-full h-[400px] relative sm:w-8/12 lg:w-full"
-            data-aos="fade-left"
-          >
-            <Image
-              src={'/images/team-illustration.svg'}
-              layout="fill"
-              objectFit="fill"
-              alt="Code editor and UI Editing popup"
-            />
-          </aside>
-        </section>
-        <LineDivider />
         {/* Our Projects */}
         <section className="flex flex-col gap-16 items-center">
           <div
@@ -147,55 +156,55 @@ const Home = () => {
           </div>
         </section>
         {/* Prices */}
-        <section className="flex flex-col gap-16 items-center">
-          <div
-            className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12"
-            data-aos="zoom-in-up"
-          >
-            <SectionSentence
-              badge="GET STARTED"
-              title="What do you need? Choose a service that can help you"
-            />
-          </div>
-          <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
-            <div data-aos="fade-up-right">
-              <PricingCard
-                price="500$"
-                title="UI Design"
-                features={[
-                  '10 design pages',
-                  'Well-documented',
-                  '2 revisions',
-                  '$100/additional page'
-                ]}
-              />
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300">
-              <PricingCard
-                price="5000$"
-                title="Development"
-                features={[
-                  'Web & Mobile',
-                  'Well-documented',
-                  '4 revisions',
-                  '$1000/additional feature'
-                ]}
-              />
-            </div>
-            <div data-aos="fade-up-left">
-              <PricingCard
-                price="3000$"
-                title="Maintenance"
-                features={[
-                  'Daily backup',
-                  '3 hours of maintenance',
-                  'Including fixing',
-                  '$50/additional hour'
-                ]}
-              />
-            </div>
-          </div>
-        </section>
+        {/*<section className="flex flex-col gap-16 items-center">*/}
+        {/*  <div*/}
+        {/*    className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12"*/}
+        {/*    data-aos="zoom-in-up"*/}
+        {/*  >*/}
+        {/*    <SectionSentence*/}
+        {/*      badge="GET STARTED"*/}
+        {/*      title="What do you need? Choose a service that can help you"*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*  <div className="w-full grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">*/}
+        {/*    <div data-aos="fade-up-right">*/}
+        {/*      <PricingCard*/}
+        {/*        price="500$"*/}
+        {/*        title="UI Design"*/}
+        {/*        features={[*/}
+        {/*          '10 design pages',*/}
+        {/*          'Well-documented',*/}
+        {/*          '2 revisions',*/}
+        {/*          '$100/additional page'*/}
+        {/*        ]}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*    <div data-aos="fade-up" data-aos-delay="300">*/}
+        {/*      <PricingCard*/}
+        {/*        price="5000$"*/}
+        {/*        title="Development"*/}
+        {/*        features={[*/}
+        {/*          'Web & Mobile',*/}
+        {/*          'Well-documented',*/}
+        {/*          '4 revisions',*/}
+        {/*          '$1000/additional feature'*/}
+        {/*        ]}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*    <div data-aos="fade-up-left">*/}
+        {/*      <PricingCard*/}
+        {/*        price="3000$"*/}
+        {/*        title="Maintenance"*/}
+        {/*        features={[*/}
+        {/*          'Daily backup',*/}
+        {/*          '3 hours of maintenance',*/}
+        {/*          'Including fixing',*/}
+        {/*          '$50/additional hour'*/}
+        {/*        ]}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
         {/* Testimonial */}
         <section className="flex flex-col gap-16 items-center">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12" data-aos="zoom-in-up">
