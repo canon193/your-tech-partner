@@ -5,6 +5,7 @@ interface InputProps {
   onSubmit?: React.FormEventHandler<HTMLInputElement>
   required?: boolean
   id?:string
+  name?:string
   placeholder?:string
 }
 const Input = ({
@@ -13,6 +14,7 @@ const Input = ({
   onSubmit = () => {},
   required = false,
   id,
+  name,
   placeholder
 }: InputProps) => {
   return (
@@ -25,6 +27,7 @@ const Input = ({
         onSubmit={onSubmit}
         required={required}
         id={id}
+        name={name}
         placeholder={placeholder}
       />
     </>

@@ -6,8 +6,8 @@ import Image from "next/legacy/image"
 interface ProjectCardProps extends LazyCardProps {
   title: string
   description: string
-  hasImage: boolean
-  imageUrl:string
+  hasImage?: boolean
+  imageUrl?:string
 }
 const ProjectCard = ({
   title,

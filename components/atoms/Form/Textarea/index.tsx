@@ -6,6 +6,7 @@ interface TextAreaProps {
   required?: boolean
   rows?: number
   id?:string
+  name?:string
   placeholder?:string
 }
 const TextArea = ({
@@ -15,6 +16,7 @@ const TextArea = ({
   required = false,
   rows = 4,
   id,
+  name,
   placeholder
 }: TextAreaProps) => {
   return (
@@ -27,6 +29,7 @@ const TextArea = ({
         required={required}
         rows={rows}
         id={id}
+        name={name}
         placeholder={placeholder}
       ></textarea>
     </>
