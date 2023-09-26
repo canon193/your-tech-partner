@@ -47,15 +47,15 @@ const Footer = () => {
                 <NavLink value="Term of Service" href="/term-of-service" />
               </div>
             </div>
-            <div className="space-y-5">
-              <Text value="RESOURCES" textStyle="FooterLinkGroupTitle" />
-              <div className="space-y-[10px]">
-                <NavLink value="Support" href="/support" />
-                <NavLink value="Documentation" href="/documentation" />
-                <NavLink value="License" href="/license" />
-                <NavLink value="Sitemap" href="/sitemap" />
-              </div>
-            </div>
+            {/*<div className="space-y-5">*/}
+            {/*  <Text value="RESOURCES" textStyle="FooterLinkGroupTitle" />*/}
+            {/*  <div className="space-y-[10px]">*/}
+            {/*    <NavLink value="Support" href="/support" />*/}
+            {/*    <NavLink value="Documentation" href="/documentation" />*/}
+            {/*    <NavLink value="License" href="/license" />*/}
+            {/*    <NavLink value="Sitemap" href="/sitemap" />*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       </footer>

@@ -16,7 +16,7 @@ const ButtonLink = ({
   radius = 'rounded',
 }: ButtonLinkProps) => {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref target={'_blank'} rel="noreferrer">
         <Button
           value={value}
           color={color}

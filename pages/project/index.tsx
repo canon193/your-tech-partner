@@ -6,37 +6,17 @@ import ProjectCard from 'components/yourTechPartner/ProjectCard'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import randomString from 'utils/randomString'
+import projectDetail from './projects.json'
 
 const Project = () => {
   interface Project {
     title: string
     description: string
+    imageUrl: string
+    linkDetail: string
   }
-  const projectList: Project[] = [
-    {
-      title: 'H&M Website',
-      description: 'E-commerce brand website',
-      imageUrl: '/images/projects/hmwebsite.jpg',
-      linkDetail: '/project/hm-website'
-    },
-    {
-      title: 'Ralph Lauren Website',
-      description: 'E-commerce brand website',
-      imageUrl: '/images/projects/ralphlauren.jpg',
-      linkDetail: '/project/ralph-lauren-website'
-    },
-    {
-      title: 'Service Car Mobile Application',
-      description: 'A landing page for desktop app',
-      linkDetail: '/project/detail'
-    },
-    {
-      title: 'Vinfast Automotives Applications',
-      description: 'A landing page for mobile app',
-      imageUrl: '/images/projects/vinfast.png',
-      linkDetail: '/project/vinfast-automotives-applications'
-    },
-  ]
+  const projectList: Project[] = projectDetail
+  
   return (
     <PageTemplate title="Project - Your Tech Partner">
       <section className="flex flex-col items-center gap-5 md:flex-row md:justify-between">

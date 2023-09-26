@@ -7,20 +7,18 @@ import ImageCard from 'components/yourTechPartner/ImageCard'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 import randomString from 'utils/randomString'
+import projectDetail from './projects.json'
+
 
 const HMProjectDetail = () => {
   interface Project {
     title: string
     description: string
+    imageUrl: string
+    linkDetail: string
   }
-  const projectList: Project[] = [
-    {
-      title: 'Ralph Lauren Website',
-      description: 'E-commerce brand website',
-      imageUrl: '/images/projects/ralphlauren.jpg',
-      linkDetail: '/project/ralph-lauren-website'
-    },
-  ]
+  const projectList: Project[] = projectDetail
+
   return (
     <PageTemplate title='Project Detail - Your Tech Partner'>
       <section className="grid place-items-center" data-aos="zoom-in-up">

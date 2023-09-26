@@ -4,10 +4,12 @@ import React from 'react'
 interface Props {
   avatarSrc: string
   name: string
+  linkedin: string
   company: string
+  company_website: string
   testimony: string
 }
-const TestimonialCard = ({ avatarSrc, company, name, testimony }: Props) => {
+const TestimonialCard = ({ avatarSrc, company, name, linkedin, company_website, testimony }: Props) => {
   return (
     <div className="w-full px-10 py-14 bg-light rounded-md select-none">
 
@@ -31,8 +33,20 @@ const TestimonialCard = ({ avatarSrc, company, name, testimony }: Props) => {
         </div>
         <div className="space-y-8">
           <div className="space-y-2">
-            <Text value={name} textStyle="TestimonialName" />
-            <Text value={company} textStyle="TestimonialCompany" />
+            {linkedin ? (
+              <a href={linkedin}>
+                <Text value={name} textStyle="TestimonialName" />
+              </a>
+            ) : (
+              <Text value={name} textStyle="TestimonialName" />
+            )}
+            {company_website ? (
+              <a href={company_website}>
+                <Text value={company} textStyle="TestimonialCompany" />
+              </a>
+            ) : (
+              <Text value={company} textStyle="TestimonialCompany" />
+            )}
           </div>
           <Text value={testimony} textStyle="TestimonialDescription" />
         </div>
