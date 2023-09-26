@@ -18,8 +18,10 @@ const Contact = () => {
     message: "",
   });
   const urlAction = process.env.CONTACT_US_GOOGLE_SCRIPT
-  function handleChange(e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setState({ ...state, [e.target.name]: e.target.value });
+  function handleChange(event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { target } = event
+    console.log('event', (target as HTMLInputElement | HTMLTextAreaElement).value )
+    setState({ ...state, [(target as HTMLInputElement | HTMLTextAreaElement).name]: (target as HTMLInputElement | HTMLTextAreaElement).value });
   }
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
