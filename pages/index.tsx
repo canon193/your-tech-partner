@@ -75,7 +75,7 @@ const Home = () => {
               <div style={{ display: "flex", flexDirection: "column", gap: "1.2em" }}>
                 <ButtonLink
                   value="See Our Teams"
-                  href="/teams#our-team"
+                  href="/about#our-team"
                   size="small"
                   color="white"
                   style="light"
