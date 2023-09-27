@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@types/gtag.js": "^0.0.13",
     "aos": "^2.3.4",
     "axios": "^1.5.0",
