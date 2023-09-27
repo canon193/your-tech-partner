@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://your-tech-partner.com
+
+# Sitemaps
+Sitemap: https://your-tech-partner.com/sitemap.xml
