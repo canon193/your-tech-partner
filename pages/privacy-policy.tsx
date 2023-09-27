@@ -4,6 +4,7 @@ import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
 import React from 'react'
 
+import styles from "../styles/PrivacyPolicy.module.scss"
 const PrivacyPolicy = () => {
   return (
     <PageTemplate>
@@ -13,7 +14,7 @@ const PrivacyPolicy = () => {
       </section>
       <LineDivider />
       <section className="grid place-items-center" data-aos="fade-up">
-          <div className="prose mx-auto max-w-5xl rounded-sm bg-white py-12 px-4 shadow-md sm:px-16">
+          <div className={`prose mx-auto max-w-5xl rounded-sm bg-white py-12 px-4 shadow-md sm:px-16 ${styles.contentDefault}`}>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
             <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
             <h2>Interpretation and Definitions</h2>
