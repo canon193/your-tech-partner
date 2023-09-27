@@ -37,3 +37,5 @@ yarn-error.log*
 .vscode
 package-lock.json
 .env
+.env*
+yarn.lock

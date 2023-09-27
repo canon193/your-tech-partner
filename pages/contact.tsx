@@ -7,40 +7,41 @@ import PageTemplate from 'components/templates/PageTemplate'
 import React, { FormEvent } from 'react'
 import { FiMail, FiPhoneCall, FiSlack } from 'react-icons/fi'
 import {LiaSkype} from 'react-icons/lia'
-import axios from "axios";
+import * as process from "process";
+
 
 const Contact = () => {
-  const [state, setState] = React.useState({
-    script_type: "contact",
-    email: "",
-    name: "",
-    subject: "",
-    message: "",
-  });
-  const urlAction = process.env.CONTACT_US_GOOGLE_SCRIPT
-  function handleChange(event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { target } = event
-    console.log('event', (target as HTMLInputElement | HTMLTextAreaElement).value )
-    setState({ ...state, [(target as HTMLInputElement | HTMLTextAreaElement).name]: (target as HTMLInputElement | HTMLTextAreaElement).value });
+  interface FormData {
+    script_type: string;
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
   }
-
+  const contact_endpoint = process.env.NEXT_PUBLIC_CONTACT_US_GOOGLE_SCRIPT
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    let formData = new FormData();
+    const form = event.target as HTMLFormElement;
+    const data = new FormData(form);
+    const formDataObject: Partial<FormData> = {};
 
-    for (let [key, value] of Object.entries(state)) {
-      formData.append(key, value);
-    }
-
-    await axios
-      .post('https://script.google.com/macros/s/AKfycbwFeuPvhjwZaCL_pZDMltno2Jh9HxkN8nOvEsZsth7Dcgs2aHzqIKk16Athbaep6oMk/exec', formData)
-      .then(({ data }) => {
-        // Redirect used for reCAPTCHA and/or thank you page
-        // window.location.href = redirect;
-      })
-      .catch((e) => {
-        // window.location.href = e.response.data.redirect;
+    data.forEach((value, key) => {
+      formDataObject[key as keyof FormData] = value as string;
+    });
+    formDataObject["script_type"] = "contact";
+    try {
+      // @ts-ignore
+      await fetch(contact_endpoint, {
+        redirect: "follow",
+        method: 'POST',
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify(formDataObject), // Convert the form data to JSON
       });
+    } catch {
+
+    }
   }
   return (
     <>
@@ -71,12 +72,12 @@ const Contact = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full lg:flex lg:justify-end" data-aos="fade-down-left">
             <form  onSubmit={onSubmit} className="grid grid-cols-1 gap-7 p-6 md:p-9 bg-light rounded-md lg:w-10/12 ">
               <div className="grid grid-cols-2 gap-4">
-                <input type="hidden" onChange={handleChange} name="script_type" value={'contact'} />
-                <InputGroup onChange={handleChange} label="Name" name="name" />
-                <InputGroup onChange={handleChange} label="Email" name="email" />
+                <input type="hidden" name="script_type" value={'contact'} />
+                <InputGroup label="Name" name="name" />
+                <InputGroup label="Email" name="email" />
               </div>
-              <InputGroup onChange={handleChange} label="Subject" name="subject" />
-              <TextAreaGroup onChange={handleChange} label="Message" name="message" />
+              <InputGroup label="Subject" name="subject" />
+              <TextAreaGroup label="Message" name="message" />
               <Button value="Send Message" />
             </form>
           </aside>

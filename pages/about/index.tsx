@@ -92,7 +92,7 @@ const About = () => {
               imageSrc="/images/about/khanguyen.jpg"
               job="Software Engineer"
               name="Kha Nguyen"
-              linkedin=""
+              linkedin="https://www.linkedin.com/in/nguyễn-văn-kha-023b1bb0/"
             />
           </div>
           <div data-aos="fade-up">

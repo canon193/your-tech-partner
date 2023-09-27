@@ -44,7 +44,7 @@ const TestimonialList = () => {
             linkedin="https://www.linkedin.com/in/dapippenger/"
             company="Epicurean Advertising"
             company_website="https://epicureanadvertising.com/"
-            testimony={`"Le and his team have worked with me on various projects and has consistently impressed me with their ability to take my ideas and turn them into a functional website, custom data tool, or both.</br>The concerns I had working with someone multiple time zones away (14 hours ahead of us) proved completely unfounded. They have made himself available at the beginning and end of our day to have Zoom conferences, email exchanges, or chats.</br>If you utilize Le and his team, their speedy response times and excellent programming skill set will make you look like a genius. At least, that is what they have done for me."`}
+            testimony={`"Le and his team have worked with me on various projects and has consistently impressed me with their ability to take my ideas and turn them into a functional website, custom data tool, or both.</br>The concerns I had working with someone multiple time zones away (14 hours ahead of us) proved completely unfounded. They have made himself available at the beginning and end of our day to have Zoom conferences, email exchanges, or chats. If you utilize Le and his team, their speedy response times and excellent programming skill set will make you look like a genius. At least, that is what they have done for me."`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
