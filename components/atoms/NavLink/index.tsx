@@ -6,8 +6,9 @@ interface Props {
   href: string
   value: string
   canActive?: boolean
+  className?: string
 }
-const NavLink = ({ href, value, canActive = false }: Props) => {
+const NavLink = ({ href, value, canActive = false, className }: Props) => {
   const router = useRouter()
   const isMobile = useMobileDeviceDetection()
   return (
@@ -17,7 +18,7 @@ const NavLink = ({ href, value, canActive = false }: Props) => {
             router.pathname == href && canActive
               ? 'font-semibold'
               : 'text-opacity-80'
-          } ${isMobile ? 'cursor-default' : 'cursor-pointer'}`}
+          } ${isMobile ? 'cursor-default' : 'cursor-pointer'} ${className}`}
         >
           {value}
         </p>
