@@ -64,7 +64,7 @@ const TestimonialList = () => {
             linkedin=""
             company="Oaksure Financial Services"
             company_website="https://www.oaksure.co.za"
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            testimony={`"Your Tech Partner have been amazing in all of our development work. We have worked well together since the start. From API’s, to custom scripts to Zapier, they have allowed us to automate a huge amount of our daily  work and focus on the key priorities of the business. I would recommend Your Tech Partner to anyone looking for more free time and less busy work.”"`}
           />
         </SwiperSlide>
         <SwiperSlide className='mt-10'>
