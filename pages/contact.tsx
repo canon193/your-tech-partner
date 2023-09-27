@@ -89,8 +89,8 @@ const Contact = () => {
           </aside>
         </section>
         <DiaLog
-          title='Sent contact'
-          description='Thank you for your messages. We will be in touch.'
+          title='Your message are sent'
+          description="Thank you for contacting us! We'll be in touch shortly."
           isOpen={isOpen}
           closeModal={closeModal}
         />
