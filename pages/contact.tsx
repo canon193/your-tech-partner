@@ -4,10 +4,11 @@ import TextAreaGroup from 'components/molecules/FormGroup/TextAreaGroup'
 import IconListItem from 'components/molecules/IconListItem'
 import PageSentence from 'components/molecules/PageSentence'
 import PageTemplate from 'components/templates/PageTemplate'
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { FiMail, FiPhoneCall, FiSlack } from 'react-icons/fi'
 import {LiaSkype} from 'react-icons/lia'
 import * as process from "process";
+import DiaLog from 'components/yourTechPartner/Dialog'
 
 
 const Contact = () => {
@@ -19,6 +20,10 @@ const Contact = () => {
     message: string;
   }
   const contact_endpoint = process.env.NEXT_PUBLIC_CONTACT_US_GOOGLE_SCRIPT
+  const [isOpen, setIsOpen] = useState(false);
+  function closeModal() {
+    setIsOpen(false)
+  }
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const form = event.target as HTMLFormElement;
@@ -42,6 +47,7 @@ const Contact = () => {
     } catch {
 
     }
+    setIsOpen(true)
   }
   return (
     <>
@@ -82,6 +88,12 @@ const Contact = () => {
             </form>
           </aside>
         </section>
+        <DiaLog
+          title='Your message are sent'
+          description="Thank you for contacting us! We'll be in touch shortly."
+          isOpen={isOpen}
+          closeModal={closeModal}
+        />
       </PageTemplate>
     </>
   )
