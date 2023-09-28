@@ -28,6 +28,15 @@ const NavBar = () => {
     };
   }, [])
   useEffect(() => {
+    const resizeListener = () => setIsOpen(false)
+
+    window.addEventListener('resize', resizeListener)
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    };
+  }, [])
+  useEffect(() => {
     if (isOpen) {
       document.body.classList.add('h-screen')
       document.body.classList.add('overflow-y-hidden')
@@ -39,16 +48,20 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`pt-8 w-full top-0 left-0 z-30 ${
-          isScrolled ? 'fixed' : 'absolute'
+        className={`w-full top-0 left-0 z-30 ${
+          isScrolled ? 'bg-dark fixed' : 'pt-8 absolute'
+        } ${
+          isOpen ? 'h-full lg:h-auto bg-dark' : ''
         }`}
       >
         <Container>
           <div
             className={`${
-              browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'
-            } px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
-              isScrolled || isOpen ? '' : 'lg:bg-transparent lg:px-0'
+              browserName == 'Firefox' ? 'bg-gray-900' : (isOpen && isMobile) || isScrolled ? 'bg-dark' : 'bg-light'
+            } w-full rounded-md lg:backdrop-blur-3xl ${
+              isScrolled || isOpen ? '' : 'bg-transparent lg:px-0'
+            } ${
+              isMobile ? '' : 'px-6 py-4'
             }`}
           >
             <div className="flex flex-col lg:flex-row w-full place-content-between lg:place-items-center">
@@ -69,25 +82,29 @@ const NavBar = () => {
                   isOpen ? '' : 'hidden '
                 }space-y-5 mt-4 lg:mt-0 lg:space-y-0 lg:space-x-16 lg:flex lg:place-items-center`}
               >
-                <NavLink href="/service" value="Services" canActive={true} />
-                <NavLink
+                <NavLink className="mb-4 lg:mb-0" href="/service" value="Services" canActive={true} />
+                <NavLink className="mb-4 lg:mb-0"
                   href="/how-we-work"
                   value="How We Work"
                   canActive={true}
                 />
-                <NavLink href="/project" value="Project" canActive={true} />
-                <NavLink href="/about" value="About" canActive={true} />
+                <NavLink className="mb-4 lg:mb-0" href="/project" value="Project" canActive={true} />
+                <NavLink className="mb-4 lg:mb-0" href="/faq" value="FAQ" canActive={true} />
+                <NavLink className="mb-4 lg:mb-0" href="/about" value="About" canActive={true} />
+                {
+                  isOpen && <NavLink className="mb-4 lg:mb-0" href="/contact" value="Contact" canActive={true} />
+                }
               </div>
               <div
                 className={`${isOpen ? '' : 'hidden '}lg:block mt-5 lg:mt-0`}
               >
-                <ButtonLink
+                {!isOpen && <ButtonLink
                   value="Contact"
                   style="light"
                   color="white"
                   size="small"
                   href="/contact"
-                />
+                />}
               </div>
             </div>
           </div>
