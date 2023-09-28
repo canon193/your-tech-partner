@@ -25,50 +25,12 @@ const Services = () => {
         <section className="grid place-items-center" data-aos="zoom-in-up">
           <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
             <PageSentence
-              badge="SERVICES"
-              title="We are here to help individuals or SME client for challenging demands."
+              badge="WE PARTNER WITH CLIENTS"
+              title="To create and support innovative solutions that help business become a lasting success in the marketplace."
             />
           </div>
         </section>
         <LineDivider />
-        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
-          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
-            <figure className="w-auto h-[311px] relative">
-              <Image
-                src={'/images/services/UI-UX-Design.png'}
-                layout="intrinsic"
-                width={429}
-                height={311}
-                objectFit="fill"
-                alt='UI Design'
-              />
-            </figure>
-          </aside>
-          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
-            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
-              <SectionSentence
-                badge="UI/UX DESIGN"
-                title="Convey your ideas to realistic but interesting interface"
-                paragraph="Delegate your ideas as quickly as possible, create beautiful designs and vivid prototypes."
-              />
-            </div>
-            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <SmallCardIcon
-                  title="Beautiful Design"
-                  description="Create a modern design for your idea."
-                  icon={<FiLayout />}
-                />
-                <SmallCardIcon
-                  title="Card Name"
-                  description="Create vivid prototypes for your designs."
-                  icon={<FiLayout />}
-                />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
-            </div>
-          </aside>
-        </section>
         <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
@@ -82,17 +44,20 @@ const Services = () => {
               <aside className="w-full grid grid-cols-1 gap-5">
                 <CardListIcon
                   icon={<FiSmartphone />}
-                  title="Gsuit"
+                  title="Gsuite (Google Sheets, Google Slide, Google Drive, Gmail)"
                 />
                 <CardListIcon
                   icon={<FiSmartphone />}
-                  title="Python"
+                  title="Python, Desktop App"
                 />
                 <CardListIcon
                   icon={<FiMonitor />}
-                  title="Google App Script"
+                  title="Google App Script, Google Ads Script"
                 />
-                <CardListIcon icon={<FiGlobe />} title="Google Ads Script" />
+                <CardListIcon
+                    icon={<FiGlobe />}
+                    title="Zapier, Make, Web App"
+                />
               </aside>
               <TextArrowLink label="Service Detail" href="/service/automation-solutions" />
             </div>
@@ -173,6 +138,44 @@ const Services = () => {
                 alt='Automation Solutions'
               />
             </figure>
+          </aside>
+        </section>
+        <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
+          <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+            <figure className="w-auto h-[311px] relative">
+              <Image
+                src={'/images/services/UI-UX-Design.png'}
+                layout="intrinsic"
+                width={429}
+                height={311}
+                objectFit="fill"
+                alt='UI Design'
+              />
+            </figure>
+          </aside>
+          <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+            <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
+              <SectionSentence
+                badge="UI/UX DESIGN"
+                title="Convey your ideas to realistic but interesting interface"
+                paragraph="Delegate your ideas as quickly as possible, create beautiful designs and vivid prototypes."
+              />
+            </div>
+            <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
+              <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <SmallCardIcon
+                  title="Beautiful Design"
+                  description="Create a modern design for your idea."
+                  icon={<FiLayout />}
+                />
+                <SmallCardIcon
+                  title="Card Name"
+                  description="Create vivid prototypes for your designs."
+                  icon={<FiLayout />}
+                />
+              </aside>
+              <TextArrowLink label="Service Detail" href="/service/detail" />
+            </div>
           </aside>
         </section>
       </PageTemplate>
