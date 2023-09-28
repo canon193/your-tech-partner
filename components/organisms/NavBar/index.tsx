@@ -48,18 +48,20 @@ const NavBar = () => {
   return (
     <>
       <nav
-        className={`pt-8 w-full top-0 left-0 z-30 ${
-          isScrolled ? 'fixed' : 'absolute'
+        className={`w-full top-0 left-0 z-30 ${
+          isScrolled ? 'bg-dark fixed' : 'pt-8 absolute'
         } ${
-          isOpen && 'h-full lg:h-auto bg-dark'
+          isOpen ? 'h-full lg:h-auto bg-dark' : ''
         }`}
       >
         <Container>
           <div
             className={`${
               browserName == 'Firefox' ? 'bg-gray-900' : (isOpen && isMobile) || isScrolled ? 'bg-dark' : 'bg-light'
-            } px-6 py-4 w-full rounded-md lg:backdrop-blur-3xl ${
+            } w-full rounded-md lg:backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'bg-transparent lg:px-0'
+            } ${
+              isMobile ? '' : 'px-6 py-4'
             }`}
           >
             <div className="flex flex-col lg:flex-row w-full place-content-between lg:place-items-center">
@@ -87,6 +89,7 @@ const NavBar = () => {
                   canActive={true}
                 />
                 <NavLink className="mb-4 lg:mb-0" href="/project" value="Project" canActive={true} />
+                <NavLink className="mb-4 lg:mb-0" href="/faq" value="FAQ" canActive={true} />
                 <NavLink className="mb-4 lg:mb-0" href="/about" value="About" canActive={true} />
                 {
                   isOpen && <NavLink className="mb-4 lg:mb-0" href="/contact" value="Contact" canActive={true} />
