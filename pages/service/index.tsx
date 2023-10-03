@@ -65,10 +65,10 @@ const Services = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-full h-[430px] relative">
               <Image
-                src={'/images/services/Automation-Solutions.png'}
+                src={'/images/services/automation-solutions/Automation-Solutions.png'}
                 layout="intrinsic"
-                width={401}
-                height={430}
+                width={800}
+                height={446}
                 objectFit="fill"
                 alt='Automation Solutions'
               />
@@ -79,7 +79,7 @@ const Services = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-full h-[543px] relative">
               <Image
-                src={'/images/services/websites.png'}
+                src={'/images/services/websites/websites.png'}
                 layout="intrinsic"
                 width={559}
                 height={543}
@@ -93,7 +93,7 @@ const Services = () => {
               <SectionSentence
                 badge="Websites"
                 title="We create various types of website: E-commerce, landing pages, Web-Application."
-                paragraph="Frameworks: Magento, WordPress, Shopify, CMS. "
+                paragraph="Frameworks: Next JS, React, Magento, WordPress, etc"
               />
             </div>
             <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
@@ -111,31 +111,24 @@ const Services = () => {
           <aside className="grid gap-12 place-items-center" data-aos="fade-up-right">
             <div className="sm:w-10/12 md:w-8/12 lg:w-full text-center lg:text-left">
               <SectionSentence
-                badge="Embedded System"
-                title="Create solutions for software, middleware to serve electronic system."
-                paragraph="Tell us your problem, we worked in automotive industry for years to solve its software demands."
+                badge="Automotive"
+                title="We worked in automotive industry for years"
+                paragraph="We elevate automotive software with cutting-edge AUTOSAR solutions, seamlessly integrating from the Microcontroller Abstraction Layer through to robust Application Layers, ensuring vehicles are not only compliant but technologically advanced and safe."
               />
             </div>
             <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="w-full grid grid-cols-1 gap-5">
-                <CardListIcon
-                  icon={<FiMonitor />}
-                  title="Linux"
-                />
-                <CardListIcon icon={<FiGlobe />} title="Automotives" />
-              </aside>
-              <TextArrowLink label="Service Detail" href="/service/embedded-system" />
+              <TextArrowLink label="Service Detail" href="/service/automotive" />
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
             <figure className="w-auto h-[430px] relative">
               <Image
-                src={'/images/services/embedded-system.png'}
+                src={'/images/services/automotive/embedded-system.png'}
                 layout="intrinsic"
-                width={401}
-                height={430}
+                width={593}
+                height={708}
                 objectFit="fill"
-                alt='Automation Solutions'
+                alt='Autosar Architechture'
               />
             </figure>
           </aside>
@@ -144,10 +137,10 @@ const Services = () => {
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
             <figure className="w-auto h-[311px] relative">
               <Image
-                src={'/images/services/UI-UX-Design.png'}
+                src={'/images/services/ui-ux-design/UI-UX-design.avif'}
                 layout="intrinsic"
-                width={429}
-                height={311}
+                width={626}
+                height={417}
                 objectFit="fill"
                 alt='UI Design'
               />
@@ -174,7 +167,7 @@ const Services = () => {
                   icon={<FiLayout />}
                 />
               </aside>
-              <TextArrowLink label="Service Detail" href="/service/detail" />
+              <TextArrowLink label="Service Detail" href="/service/ui-ux-design" />
             </div>
           </aside>
         </section>

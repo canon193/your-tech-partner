@@ -33,7 +33,6 @@ const Faq = () => {
       description: `1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty.`,
     },
   ]
-  const [randomFaqs, setRandomFaqs] = useState([faqs, faqs, faqs, faqs])
   const [activeFaq, setActiveFaq] = useState(faqs)
   useEffect(() => {
     const faqs = [
@@ -62,12 +61,6 @@ const Faq = () => {
         description: `1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty.`,
       },
     ]
-    setRandomFaqs([
-      faqs,
-      getRandomItemsFromArray(faqs, 5),
-      getRandomItemsFromArray(faqs, 4),
-      getRandomItemsFromArray(faqs, 3),
-    ])
   }, [])
   return (
     <PageTemplate>
@@ -86,27 +79,27 @@ const Faq = () => {
               {
                 name: 'General',
                 onClick: () => {
-                  setActiveFaq(randomFaqs[0])
+                  setActiveFaq(faqs)
                 },
               },
-              {
-                name: 'Transaction',
-                onClick: () => {
-                  setActiveFaq(randomFaqs[1])
-                },
-              },
-              {
-                name: 'Maintenance',
-                onClick: () => {
-                  setActiveFaq(randomFaqs[2])
-                },
-              },
-              {
-                name: 'Technology',
-                onClick: () => {
-                  setActiveFaq(randomFaqs[3])
-                },
-              },
+              // {
+              //   name: 'Transaction',
+              //   onClick: () => {
+              //     setActiveFaq(randomFaqs[1])
+              //   },
+              // },
+              // {
+              //   name: 'Maintenance',
+              //   onClick: () => {
+              //     setActiveFaq(randomFaqs[2])
+              //   },
+              // },
+              // {
+              //   name: 'Technology',
+              //   onClick: () => {
+              //     setActiveFaq(randomFaqs[3])
+              //   },
+              // },
             ]}
           />
         </div>

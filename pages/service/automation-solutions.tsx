@@ -23,36 +23,6 @@ import randomString from 'utils/randomString'
 import CardListIcon from 'components/molecules/Card/CardListIcon'
 
 const AutomationSolutionServiceDetail = () => {
-  interface Faq {
-    title: string
-    description: string
-  }
-  const faqs: Faq[] = [
-    {
-      title: `How is the payment system?`,
-      description: `If the project has agreed, you will pay an advance, and when the progress reaches 50% you will make a second payment, and when the progress is 100% you will pay it off.`,
-    },
-    {
-      title: `Can I consult first?`,
-      description: `Of course you can consult us first. We are very happy to help your problems and provide our best solutions. You can contact us via the contact page.`,
-    },
-    {
-      title: `What if the project stops halfway?`,
-      description: `We promise to always finish the project on time, if a problem occurs (because of our mistake), all payments will be refunded. And the project will be terminated.`,
-    },
-    {
-      title: `Does it include servers and domains?`,
-      description: `You don't need to think about anything else, we have everything prepared. You just need to check your progress and make sure the features you want are the right one.`,
-    },
-    {
-      title: `Will I get the source code?`,
-      description: `When the project is 100% complete, all the resources, such as design files, analysis diagrams, source code, etc. will be provided to you. You don't need to worry about this.`,
-    },
-    {
-      title: `Is there a warranty?`,
-      description: `1 year warranty for our errors or mistakes. If you want to add a feature that is not included in the warranty, there is another fee per feature, and the price depends on the difficulty.`,
-    },
-  ]
   const features: FeatureCardProps[] = [
     {
       title: 'Review architect',
@@ -81,8 +51,8 @@ const AutomationSolutionServiceDetail = () => {
       <section className="grid place-items-center">
         <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
           <PageSentence
-            badge="Process Automation"
-            title="We implement processes that automate client’s workflow"
+            badge="Automation Solutions"
+            title="We deliver expert consultations and proposals, dedicated to maximizing the automation of your workflows."
           />
         </div>
       </section>
@@ -91,10 +61,10 @@ const AutomationSolutionServiceDetail = () => {
         <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
           <figure className="w-full h-[450px] relative">
             <Image
-              src={'/images/services/automation-solutions-banner.png'}
+              src={'/images/services/automation-solutions/api-integration.png'}
               layout="fill"
               objectFit="fill"
-              alt="IDE that connect to Desktop, Mobile and Web mean multiple platform"
+              alt="API Integration Service"
             />
           </figure>
         </aside>
@@ -102,75 +72,105 @@ const AutomationSolutionServiceDetail = () => {
           <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
             <div className="grid gap-8">
               <Text
-                value={`We can customize different kinds of platform to help to automate your system smoothly.`}
+                value={`API Integration services. We specialize in integrating advanced APIs, such as ChatGPT, Shopify, Jotform, CRMs, etc directly into Google Sheets, SQL or noSQL database, ensuring smooth, automated data flow and enhanced operational efficiency for your business.`}
                 textStyle={'SectionParagraph'}
               />
             </div>
-            <aside className="w-full grid grid-cols-1 gap-5">
-                <CardListIcon
-                  icon={<FiSmartphone />}
-                  title="Gsuit"
-                />
-                <CardListIcon
-                  icon={<FiSmartphone />}
-                  title="Python"
-                />
-                <CardListIcon
-                  icon={<FiMonitor />}
-                  title="Google App Script"
-                />
-                <CardListIcon icon={<FiGlobe />} title="Google Ads Script" />
-              </aside>
           </div>
           <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
         </aside>
       </section>
-      <section className="grid place-items-center gap-16">
-        <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
-          <PageSentence
-            badge="FEATURES"
-            title="Here's what you will get when purchasing this service"
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map((feature) => {
-            return (
-              <div key={randomString(64)} data-aos="fade-up">
-                <FeatureCard
-                  title={feature.title}
-                  description={feature.description}
-                  icon={feature.icon}
-                  isNaked={true}
-                />
-              </div>
-            )
-          })}
-        </div>
-      </section>
-      <section className="grid place-items-center gap-16">
-        <div className="sm:w-10/12 md:w-8/12 lg:w-6/12 text-center" data-aos="zoom-in-up">
-          <PageSentence
-            badge="FAQ"
-            title="Frequently asked questions, maybe the same as yours"
-          />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-7">
-          {faqs.map((faq) => {
-            return (
-              <div className="grid gap-2.5" key={randomString(64)} data-aos="fade-right">
-                <Text textStyle="FAQTitle" value={faq.title} />
-                <Text textStyle="FAQDescription" value={faq.description} />
-              </div>
-            )
-          })}
-        </div>
-        <div className="text-white text-base font-medium">
-          {`Didn't find an answer? `}
-          <div className="sm:hidden"></div>
-          <div className="text-primary inline">
-            <Link href={'/quote'}>Do not hesitate to ask!</Link>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/services/automation-solutions/zapier.png'}
+              layout="fill"
+              objectFit="fill"
+              alt="Zapier platform"
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+            <div className="grid gap-8">
+              <Text
+                value={`No-Code Platform Support: Elevate your operational efficiency with our specialized services in platforms like Zapier, Make, and Pabbly Connect. We offer comprehensive consultation, strategic setup, and personalized workflow customization, aligning technology seamlessly with your business goals to ensure streamlined, automated success in your endeavors.`}
+                textStyle={'SectionParagraph'}
+              />
+            </div>
           </div>
-        </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+        </aside>
+      </section>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/services/automation-solutions/live-dashboard.png'}
+              layout="fill"
+              objectFit="fill"
+              alt="Live Dashboard"
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+            <div className="grid gap-8">
+              <Text
+                value={`Live Dashboard: Unlock real-time, data-driven decision-making with our tailor-made live dashboard services. Leveraging the power of Looker Data Studio, we facilitate a visual exploration of your real-time data, ensuring instant access to crucial metrics and insights. Our solutions enable you to navigate through your data effortlessly, enhancing strategic planning and operational agility in your business landscape.`}
+                textStyle={'SectionParagraph'}
+              />
+            </div>
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+        </aside>
+      </section>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/services/automation-solutions/google-ads-script.jpg'}
+              layout="fill"
+              objectFit="fill"
+              alt="Google Ads Script"
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+            <div className="grid gap-8">
+              <Text
+                value={`Google Ads Script:<br>Output Google Ads report to GoogleSheet<br>Automatically enable/disable campaigns based on customized criterias: total spent, daily spent, top impr, conversions, etc`}
+                textStyle={'SectionParagraph'}
+              />
+            </div>
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+        </aside>
+      </section>
+      <section className="grid grid-cols-1 place-items-center gap-8 lg:grid-cols-2 lg:gap-5 ">
+        <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-right">
+          <figure className="w-full h-[450px] relative">
+            <Image
+              src={'/images/services/automation-solutions/Web-scraping.png'}
+              layout="fill"
+              objectFit="fill"
+              alt="Web Scraping"
+            />
+          </figure>
+        </aside>
+        <aside className="grid gap-12 place-items-center" data-aos="fade-up-left">
+          <div className="sm:w-10/12 md:w-8/12 lg:w-full lg:text-left grid gap-10">
+            <div className="grid gap-8">
+              <Text
+                value={`Web Crawling, Scraping: Extract data from Government Websites, real estate websites, or shopping pages. The data extracted could be images, descriptions, prices, files, etc., saving this data into a database for further analysis.`}
+                textStyle={'SectionParagraph'}
+              />
+            </div>
+          </div>
+          <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full"></div>
+        </aside>
       </section>
     </PageTemplate>
   )
