@@ -23,7 +23,7 @@ const Services = () => {
     <>
       <PageTemplate title='Service - Your Tech Partner'>
         <section className="grid place-items-center" data-aos="zoom-in-up">
-          <div className="text-center sm:w-10/12 md:w-8/12 lg:w-6/12">
+          <div className="text-center sm:w-10/12 md:w-8/12 lg:w-10/12">
             <PageSentence
               badge="WE PARTNER WITH CLIENTS"
               title="To create and support innovative solutions that help business become a lasting success in the marketplace."
@@ -121,13 +121,14 @@ const Services = () => {
             </div>
           </aside>
           <aside className="w-full sm:w-10/12 md:w-8/12 lg:w-full" data-aos="fade-up-left">
-            <figure className="w-auto h-[430px] relative">
+            <figure className="w-auto h-auto relative">
               <Image
                 src={'/images/services/automotive/embedded-system.png'}
-                layout="intrinsic"
+                layout="responsive"
                 width={593}
                 height={708}
                 objectFit="fill"
+                objectPosition="center"
                 alt='Autosar Architechture'
               />
             </figure>
