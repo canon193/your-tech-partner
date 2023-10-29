@@ -74,7 +74,7 @@ const TestimonialList = () => {
             linkedin="https://www.linkedin.com/in/will-panton-4b780616"
             company="Vets Love Pets"
             company_website="https://vetslovepets.com.au/"
-            testimony={`"Your company is truly upstanding and is behind its product 100%. It's the perfect solution for our business. It has really helped our business."`}
+            testimony={`"We have been working with Vu for 12 months and he has been a fantastic addition to our contractor team. He is attentive, efficient and highly effective in producing technical solutions to our data transfer requirements. He is proactive and regularly puts forward suggestions that will improve our systems before we get caught out by any deficiencies. Highly recommend his services."`}
           />
         </SwiperSlide>
       </Swiper>
